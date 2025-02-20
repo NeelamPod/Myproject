@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="App Test Regression Suite" thread-count="5"
+	parallel="tests" verbose="4">
+
+
+	<listeners>
+		<listener
+			class-name="com.qa.listeners.ExtentReportListener" />
+		<listener
+			class-name="com.qa.listeners.TestAllureListener" />
+		<!-- <listener class-name="com.qa.listeners.AnnotationTransformer" 
+			/> -->
+	</listeners>
+
+
+
+	<test name="Login Page Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="126.0" />
+		<parameter name="testname" value="Login Page Test" />
+
+
+		<classes>
+			<class name="com.qa.tests.LoginPageTest" />
+		</classes>
+	</test>
+
+	<!-- <test name="Accounts Page Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="113.0" />
+		<parameter name="testname" value="Accounts Page Test" />
+
+		<classes>
+			<class name="com.qa.tests.AccountsPageTest" />
+		</classes>
+	</test>
+
+
+	<test name="ProductInfo Page Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="124.0" />
+		<parameter name="testname" value="ProductInfo Page Test" />
+
+		<classes>
+			<class name="com.qa.tests.ProductInfoPageTest" />
+		</classes>
+	</test>
+
+	<test name="Register Page Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="125.0" />
+		<parameter name="testname" value="Register Page Test" />
+
+
+		<classes>
+			<class name="com.qa.tests.RegisterPageTest" />
+		</classes>
+	</test>
+
+ -->
+
+
+</suite>	
